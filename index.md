@@ -9,4 +9,4 @@ permalink: /
 
 # Welcome to Laoirga⁺'s Wastebasket
 
-Bla bla bla bla. Bla bla bla bla bla bla bla bla.
+This is courage in a man: to bear unflinchingly what heaven sends.
