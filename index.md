@@ -7,6 +7,6 @@ layout: home
 permalink: /
 ---
 
-# Welcome to Laoirga⁺'s Wastebasket
+# Welcome to {{ site.title }}
 
 This is courage in a man: to bear unflinchingly what heaven sends.
