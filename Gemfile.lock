@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/bibugo/jekyll-theme-console.git
-  revision: 9a4cbc559fdcdbe2ee67fadca09ff7819d975385
+  revision: 08f6139ffe238abf6115b6178daac5c031329cb2
   branch: master
   specs:
     jekyll-theme-console (0.3.10)
