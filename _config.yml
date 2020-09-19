@@ -76,4 +76,4 @@ style: hacker # dark (default), light or hacker
 
 footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
 
-#google_analytics: UA-NNNNNNNN-N
+google_analytics: UA-178461696-1
