@@ -32,5 +32,6 @@ pre.highlight::-webkit-scrollbar-track {
   background-color: var(--code-color-6);
 }
 pre.highlight::-webkit-scrollbar-thumb {
+  border-radius: 3px;
   background-color: var(--code-color-9);
 }
