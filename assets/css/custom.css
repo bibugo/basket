@@ -41,3 +41,6 @@ pre.highlight::-webkit-scrollbar-thumb {
   border-radius: 3px;
   background-color: var(--code-color-9);
 }
+pre.highlight::-webkit-scrollbar-thumb:hover {
+  background-color: var(--link-color);
+}
