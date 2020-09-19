@@ -24,7 +24,8 @@ pre.highlight {
   padding: 10px 0 10px;
 }
 pre.highlight::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
+  height: 5px;
   background-color: var(--background-color);
 }
 pre.highlight::-webkit-scrollbar-track {
