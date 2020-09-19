@@ -25,5 +25,11 @@ pre.highlight {
 }
 pre.highlight::-webkit-scrollbar {
   width: 6px;
-  background-color: #000;
+  background-color: var(--background-color);
+}
+pre.highlight::-webkit-scrollbar-track {
+  background-color: var(--code-color-6);
+}
+pre.highlight::-webkit-scrollbar-thumb {
+  background-color: var(--code-color-9);
 }
