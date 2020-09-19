@@ -20,9 +20,8 @@ img {
 code.highlighter-rouge {
   color: var(--code-color-5);
 }
-pre.highlight > code {
-  margin: 10px 0 10px;
-  display: block;
+pre.highlight {
+  padding: 10px 0 10px 0;
 }
 pre.highlight::-webkit-scrollbar {
   width: 5px;
