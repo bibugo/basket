@@ -17,6 +17,12 @@ hr {
 img {
   max-width: 100%;
 }
+table {
+  width: 100%;
+}
+th {
+  border-bottom: 1px dashed rgba(0, 255, 0, 0.9);
+}
 code.highlighter-rouge {
   color: var(--code-color-5);
 }
