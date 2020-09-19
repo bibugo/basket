@@ -4,6 +4,7 @@
 }
 .menu ul:first-child {
   margin-right:auto;
+  margin-left: -10px;
 }
 :not(.menu) > ul ul {
   padding-inline-start: 40px;
