@@ -61,6 +61,16 @@ header_pages:
   - index.md
   - about.md
 
+style: hacker # dark (default), light or hacker
+#listen_for_clients_preferred_style: true # false (default) or true
+
+footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+
+google_analytics: UA-178461696-1
+
+#
+title_html: title
+
 addnons_css:
   - custom
 
@@ -68,12 +78,3 @@ addnons_js:
   - app
 
 google_ad: adsense
-
-title_html: title
-
-style: hacker # dark (default), light or hacker
-#listen_for_clients_preferred_style: true # false (default) or true
-
-footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
-
-google_analytics: UA-178461696-1
