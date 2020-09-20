@@ -77,4 +77,4 @@ addnons_css:
 addnons_js:
   - app
 
-google_ad: adsense
+#google_ad: adsense
