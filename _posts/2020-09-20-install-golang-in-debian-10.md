@@ -5,7 +5,7 @@ date:   2020-09-20 09:58:15 +0800
 ---
 
 ```bash
-# 安装GO
+# install GO
 wget https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
 tar  -zxvf  go1.15.2.linux-amd64.tar.gz  -C  /usr/local/
 vi /etc/profile
