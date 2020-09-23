@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Update Repository From Remote Subdirectory"
+title:  "Update repository from a subdirectory of remote repo"
 date:   2020-09-22 16:57:00 +0800
 ---
 
@@ -16,8 +16,8 @@ name: Update packages from coolsnowwolf/lede
 # events but only for the master branch
 on:
   schedule:
-    - cron: '0 8 * * *'
-    - cron: '0 18 * * *'
+    - cron: '0 0 * * *'
+    - cron: '0 10 * * *'
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
