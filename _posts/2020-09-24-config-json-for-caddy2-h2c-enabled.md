@@ -1,0 +1,152 @@
+---
+layout: post
+title:  "Config.json for caddy2 h2c enabled as trojan remote"
+date:   2020-09-24 12:15:00 +0800
+---
+
+```json
+{
+    "admin": { "disabled": true },
+    "logging": {
+      "logs": {
+        "default": { "exclude": ["http.log.access.log0"] },
+        "log0": {
+          "writer": { "filename": "/var/log/caddy/access.log", "output": "file" },
+          "encoder": { "field": "common_log", "format": "single_field" },
+          "include": ["http.log.access.log0"]
+        }
+      }
+    },
+    "apps": {
+      "http": {
+        "servers": {
+          "srv0": {
+            "listen": ["127.0.0.1:80"],
+            "routes": [
+              { "handle": [{ "handler": "vars", "root": "/var/www/html" }] },
+              {
+                "match": [{ "path": ["/ws"] }],
+                "handle": [
+                  {
+                    "handler": "subroute",
+                    "routes": [
+                      {
+                        "handle": [
+                          { "handler": "rewrite", "strip_path_prefix": "/ws" },
+                          {
+                            "handler": "reverse_proxy",
+                            "upstreams": [{ "dial": "127.0.0.1:10000" }]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "handle": [
+                  { "handler": "file_server", "hide": ["Caddyfile"] }
+                ]
+              }
+            ],
+            "automatic_https": { "disable_redirects": true },
+            "logs": { "default_logger_name": "log0" },
+            "allow_h2c": true,
+            "experimental_http3": true
+          },
+          "srv1": {
+            "listen": [":8443"],
+            "routes": [
+              {
+                "match": [{ "host": ["YOUR.DOMAIN.COM"] }],
+                "handle": [
+                  {
+                    "handler": "subroute",
+                    "routes": [
+                      {
+                        "handle": [
+                          {
+                            "body": "Not Found",
+                            "close": true,
+                            "handler": "static_response",
+                            "status_code": 404
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "terminal": true
+              }
+            ],
+            "automatic_https": { "disable_redirects": true },
+            "experimental_http3": true
+          }
+        }
+      },
+      "tls": {
+        "automation": {
+          "policies": [
+            {
+              "subjects": ["YOUR.DOMAIN.COM"],
+              "issuer": {
+                "challenges": {
+                  "dns": {
+                    "provider": {
+                      "api_token": "TOKENTOKENTOKENTOKENTOKENTOKEN",
+                      "name": "cloudflare"
+                    }
+                  }
+                },
+                "module": "acme"
+              }
+            },
+            {
+              "issuer": {
+                "challenges": { "bind_host": "127.0.0.1" },
+                "module": "acme"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+  ```
+  
+  
+  this file is generate from Caddyfile
+  ```json
+  {
+  admin off
+  auto_https disable_redirects
+  experimental_http3
+}
+
+:80 {
+  bind 127.0.0.1
+
+  log {
+    output file /var/log/caddy/access.log
+    format single_field common_log
+  }
+
+  handle /ws {
+    uri strip_prefix /ws
+    reverse_proxy 127.0.0.1:10000
+  }
+
+  root * /var/www/html
+  file_server
+}
+
+https://YOUR.DOMAIN.COM:8443 {
+  tls {
+    dns cloudflare TOKENTOKENTOKENTOKENTOKENTOKEN
+  }
+
+  respond "Not Found" 404 {
+    close
+  }
+}
+  ```
