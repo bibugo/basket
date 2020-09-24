@@ -184,7 +184,6 @@ date:   2020-09-24 12:15:00 +0800
             }
         }
     }
-<<<<<<< HEAD
 }
 ```
   
@@ -193,15 +192,6 @@ date:   2020-09-24 12:15:00 +0800
 not use Caddyfile, because Caddyfile didn't support `allow_h2c` yet.
 ```
 {
-=======
-  }
-  ```
-  
-  
-  this file is generate from Caddyfile
-  ```json
-  {
->>>>>>> parent of 009fe5a... Update 2020-09-24-config-json-for-caddy2-h2c-enabled.md
   admin off
   auto_https disable_redirects
   experimental_http3
@@ -239,4 +229,4 @@ https://YOUR.DOMAIN.COM:8443 {
   }
   respond "Not Found" 404
 }
-  ```
+```
