@@ -1,4 +1,8 @@
-
+---
+layout: post
+title:  "Caddy with naiveproxy compile"
+date:   2020-09-26 13:02:15 +0800
+---
 
 # install golang
 as [here](https://www.geefire.eu.org/2020/09/20/install-golang-in-debian-10.html)
