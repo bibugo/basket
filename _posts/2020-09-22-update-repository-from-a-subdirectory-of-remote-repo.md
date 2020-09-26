@@ -15,6 +15,8 @@ name: Update packages from coolsnowwolf/lede
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
+  workflow_dispatch:
+  
   schedule:
     - cron: '0 0 * * *'
     - cron: '0 10 * * *'
@@ -52,13 +54,13 @@ jobs:
           sudo timedatectl set-timezone "Asia/Shanghai"
           git config --global user.name 'bibugo'
           git config --global user.email 'bibugo@users.noreply.github.com'
-      - name: fetch split rebase
+      - name: fetch split rebase merge push
         run: |
           git remote add upstream $REPO_URL
           git fetch upstream master:upstream-master
           git checkout upstream-master
           git subtree split --prefix=$PREFIX -b upstream-lean
           git checkout master
-          git rebase upstream-lean
+          git rebase -Xours upstream-lean
           git push -f origin master
 ```
