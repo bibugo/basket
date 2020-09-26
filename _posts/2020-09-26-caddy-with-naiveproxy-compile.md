@@ -8,6 +8,7 @@ date:   2020-09-26 13:02:15 +0800
 as [here](https://www.geefire.eu.org/2020/09/20/install-golang-in-debian-10.html)
 
 
+
 1. get forwardproxy with naïve fork ( naïve standalone version [here](https://github.com/klzgrad/naiveproxy) )
 ```bash
 git clone -b naive https://github.com/klzgrad/forwardproxy
@@ -35,9 +36,11 @@ mv ./caddy /usr/bin/caddy
 ```
 
 
+
 * pre build release download:
 
 [here - https://github.com/bibugo/caddy2-with-cloudflare-naive/releases](https://github.com/bibugo/caddy2-with-cloudflare-naive/releases)
+
 
 
 * naive config in caddy's config.json
