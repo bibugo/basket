@@ -21,7 +21,8 @@ VS Code use `Keychain access` to store credentials but not git config.
 <br />
 PS. git commandline to set credentials:
 ````bash
-git config --global user.email=your@mail.com
+git config --global user.name "username"
+git config --global user.email "your@mail.com"
 git config --global credential.helper store
 # input password first pull / push
 git pull / push
