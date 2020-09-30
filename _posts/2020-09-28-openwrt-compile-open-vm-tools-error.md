@@ -10,11 +10,14 @@ ld: cannot find -liconv
 ld: cannot find -lintl
 ```
 ---
+
 * make menuconfig
 * check `Global build settings` -> `Compile with full language support` to compile libiconv and libintl
 and the errors throw,
 
 but libiconv and libintl had been compiled into `./staging_dir/target-x86_64_musl/usr/lib/libiconv-full` and `libintl-full`.
+
+---
 
 since the lib file .so located in subfolder, it must be linked to `./staging_dir/target-x86_64_musl/usr/lib` manually.
 
@@ -31,5 +34,15 @@ ln -s /home/username/openwrt/staging_dir/target-x86_64_musl/usr/lib/libintl-full
 ls ./staging_dir/target-x86_64_musl/usr/lib/
 ```
 
+---
+
+OR use nls.mk ??? not test
+vi ./feeds/packages/utils/open-vm-tools/Makefile
+```
+    include $(INCLUDE_DIR)/package.mk
++++ include $(INCLUDE_DIR)/nls.mk
+```
+
+---
 
 ok, make again, the errors gone.
