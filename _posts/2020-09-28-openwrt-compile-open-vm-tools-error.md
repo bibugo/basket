@@ -36,13 +36,16 @@ ls ./staging_dir/target-x86_64_musl/usr/lib/
 
 ---
 
-OR use nls.mk ??? not test
-vi ./feeds/packages/utils/open-vm-tools/Makefile
-```
-    include $(INCLUDE_DIR)/package.mk
-+++ include $(INCLUDE_DIR)/nls.mk
-```
+ok, make again, the errors gone.
 
 ---
 
-ok, make again, the errors gone.
+`another error`
+
+> Package wget is missing dependencies for the following libraries:
+
+run this:
+```bash
+cp ./staging_dir/target-x86_64_musl/pkginfo/libintl-full.provides ./staging_dir/target-x86_64_musl/pkginfo/libintl.provides
+```
+
