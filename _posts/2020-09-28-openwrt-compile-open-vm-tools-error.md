@@ -38,7 +38,7 @@ ls ./staging_dir/target-x86_64_musl/usr/lib/
 
 and error:
 
-ld: warning: libiconv.so.2, needed by /home/lichao/openwrt/staging_dir/target-x86_64_musl/usr/lib/libglib-2.0.so, not found (try using -rpath or -rpath-link)
+ld: warning: libiconv.so.2, needed by /home/username/openwrt/staging_dir/target-x86_64_musl/usr/lib/libglib-2.0.so, not found (try using -rpath or -rpath-link)
 
 run:
 
