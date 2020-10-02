@@ -44,8 +44,11 @@ ok, make again, the errors gone.
 
 > Package wget is missing dependencies for the following libraries:
 
-run this:
+add to `./feeds/packages/net/wget/Makefile`
+> DEPENDS:=+libpcre +zlib `+libintl`
+
+and run
+
 ```bash
 cp ./staging_dir/target-x86_64_musl/pkginfo/libintl-full.provides ./staging_dir/target-x86_64_musl/pkginfo/libintl.provides
 ```
-
