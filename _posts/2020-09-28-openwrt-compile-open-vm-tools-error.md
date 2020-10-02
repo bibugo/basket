@@ -71,7 +71,9 @@ and not test
 
 add follow line to `./staging_dir/target-x86_64_musl/pkginfo/libintl-full.provides`:
 
-> libintl-full/lib/libintl.so.8
-> libintl-full/lib/libintl.so.8.1.5
+```
+libintl-full/lib/libintl.so.8
+libintl-full/lib/libintl.so.8.1.5
+```
 
 ...
