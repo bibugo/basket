@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Openwrt network interface alias and iproute2"
