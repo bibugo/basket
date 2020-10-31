@@ -4,7 +4,7 @@ title:  "OpenWrt on ubnt er-x"
 date:   2020-10-31 22:15:00 +0800
 ---
 
-1. TFTP Recovery
+# TFTP Recovery
 
 REF: [EdgeRouter - TFTP Recovery](https://help.ui.com/hc/en-us/articles/360019289113-EdgeRouter-TFTP-Recovery)
 
@@ -21,7 +21,7 @@ REF: [EdgeRouter - TFTP Recovery](https://help.ui.com/hc/en-us/articles/36001928
 - release button, and wait
 - TFTP recovery mode active: `eth0,eth2,eth4` and `eth1,eth3` continuously turn on and off
 
-(3) Upload firmware
+3) Upload firmware
 
 - connect pc to port `eth0`
 - set pc ip address 192.168.1.10/24
@@ -40,7 +40,7 @@ tftp> put ER-e50.recovery.v2.0.6.5208541.190708.0508.16de5fdde.img.signed
 - access via 192.168.1.1 ip address on the eth0 port
 - default username/password: ubnt
 
-2. 
+# Installation OpenWrt
 
 REF1: [Ubiquiti EdgeRouter X (ER-X)](https://openwrt.org/toh/ubiquiti/ubiquiti_edgerouter_x_er-x_ka)
 REF2: [(Chinese)](https://lisongmin.github.io/openwrt-erx/)
