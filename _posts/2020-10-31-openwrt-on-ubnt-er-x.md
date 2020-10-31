@@ -90,4 +90,9 @@ sysupgrade openwrt-19.07.4-ramips-mt7621-ubnt-erx-squashfs-sysupgrade.bin
 
 ---
 
-OK.
+on openwrt, `Network` - `Switch`, port map as:
+```
+LAN1 - LAN2 - LAN3 - LAN4    -    WAN
+eht1 - eth2 - eth3 - eth4    -    eth0
+                (right port) - (left port)
+```
