@@ -15,6 +15,8 @@ REF: [EdgeRouter - TFTP Recovery](https://help.ui.com/hc/en-us/articles/36001928
 2) Enter recovery mode
 
 -  (power unplug)
+- connect pc to port `eth0`
+- set pc ip address 192.168.1.10/24
 - push and hold reset button, plugging power cable
 - port led light up sequence from eth0 to eth4
 - continue hold reset and wait about 30 seconds until all port led light up
@@ -23,8 +25,6 @@ REF: [EdgeRouter - TFTP Recovery](https://help.ui.com/hc/en-us/articles/36001928
 
 3) Upload firmware
 
-- connect pc to port `eth0`
-- set pc ip address 192.168.1.10/24
 - on macos
 
 ```bash
