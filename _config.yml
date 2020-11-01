@@ -65,7 +65,7 @@ header_pages:
 style: hacker # dark (default), light or hacker
 #listen_for_clients_preferred_style: true # false (default) or true
 
-footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+footer: '<a href="mailto:basket@geefire.eu.org">Email me</a>'
 
 google_analytics: UA-178461696-1
 
