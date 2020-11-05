@@ -27,5 +27,12 @@ mv rui.key orig.rui.key
 services.sh restart   //restart service
 ```
 
+`/sbin/generate-certificates` set the validity days 4200, it's cause chrome error `NET::ERR_CERT_VALIDITY_TOO_LONG`
+```bash
+cp /sbin/generate-certificates generate-certificates   // file is writing protected
+vi generate-certificates   // change `4200` to `365` (3 positions)
+./generate-certificates
+```
+
 #trust ca
 `cat /etc/vmware/ssl/castore.pem`
