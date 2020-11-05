@@ -10,6 +10,8 @@ date:   2020-11-05 15:31:00 +0800
 
 modify "Host name" / "Domain name" / "search domains"
 
+OR use command line: `esxcli system hostname`
+
 # generate certificate
 
 ssh root@your.esxi.host.ip
