@@ -29,7 +29,7 @@ and add follow lines
 
 and than, **RE** compile!
 
-===
+***
 
 # openwrt compile for nanopi neo2 with NanoHatOLED
 
@@ -58,7 +58,9 @@ python3-smbus
 # AND be careful, temperature display maybe not work when press K2
 
 if not work K2, disable temperature display in python file
+
 ***nanohatoled/files/NanoHatOLED/bakebit_nanohat_oled.py*** (installed @ /usr/share/NanoHatOLED/bakebit_nanohat_oled.py)
+
 comment and set **tempStr** to empty
 ```
 #        tempI = int(open('/sys/class/thermal/thermal_zone0/temp').read());
