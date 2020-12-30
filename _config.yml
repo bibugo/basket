@@ -65,7 +65,7 @@ header_pages:
 style: hacker # dark (default), light or hacker
 #listen_for_clients_preferred_style: true # false (default) or true
 
-footer: 'Email me: <img src="static/images/email.png" style="vertical-align: middle;"></img>'
+footer: 'Email me: <img src="/static/images/email.png" style="vertical-align: middle;"></img>'
 
 google_analytics: UA-178461696-1
 
