@@ -10,7 +10,7 @@ date:   2021-01-04 10:47:00 +0800
 sudo vi /Library/Preferences/Parallels/network.desktop.xml
 ```
 
-change **<UseKextless>X</UseKextless>** to
+change **`<UseKextless>X</UseKextless>`** to
 ```
 <UseKextless>0</UseKextless>
 ```
@@ -22,7 +22,7 @@ if not exist, add to `ParallelsNetworkConfig` section
 sudo vi /Library/Preferences/Parallels/dispatcher.desktop.xml
 ```
 
-change **<Usb>0</Usb>** to
+change **`<Usb>0</Usb>`** to
 ```
 <Usb>1</Usb>
 ```
