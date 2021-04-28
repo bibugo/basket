@@ -12,5 +12,5 @@ sudo adduser xrdp ssl-cert
 echo "startxfce4" > ~/.xsession
 chmod +x ~/.xsession
 sudo systemctl restart xrdp
-sudo apt purge light-locker
+sudo apt purge light-locker  #when select gdm3 but not lightdm, remove it to prevent error
 ```
