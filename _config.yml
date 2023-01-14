@@ -37,7 +37,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-remote_theme: tareqdandachi/jekyll-shell-theme
+remote_theme: itstorque/jekyll-shell-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
